@@ -9,13 +9,32 @@ mongoose.connect('mongodb://localhost:27017/productsdb' , {useNewUrlParser: true
     })
 
 
-const testproduct = new Product({
-    name: 'Test Product',
-    price: 9.99,
-    categories: 'fruit'
-})
-testproduct.save().then(testproduct => {
-    console.log(testproduct)
+const productArr = [
+    {
+        name: 'Watermelon',
+        price: 1.5,
+        categories: 'fruit'
+    },
+    {
+        name: 'Mango',
+        price: 1.99,
+        categories: 'fruit'
+    },
+    {
+        name: 'Potato',
+        price: 0.5,
+        categories: 'vegetable'
+    },
+    {
+        name: 'Cheese',
+        price: 2.99,
+        categories: 'dairy'
+    }
+];
+
+Product.insertMany(productArr)
+.then(res => {
+    console.log(res)
 })
 .catch(err => {
     console.log(err)
