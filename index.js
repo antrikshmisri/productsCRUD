@@ -55,6 +55,17 @@ app.put('/products/:id' , async (req , res)=>{
     res.redirect(`/products/${updateProduct._id}`)
 })
 
+app.get('/products/:id/delete' , async (req , res)=>{
+    const {id} = req.params
+    const product = await Product.findById(id)
+    res.render('products/delete' , {product})
+})
+
+app.delete('/products/:id' , async (req , res)=>{
+    const {id} = req.params
+    await Product.findByIdAndDelete(id)
+    res.redirect('/products')
+})
 app.listen(5050 , ()=>{
     console.log("Listening on port 5050")
 })

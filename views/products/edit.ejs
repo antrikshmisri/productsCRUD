@@ -20,9 +20,9 @@
             <br><br>
             <label for="categories">Category</label>
             <select name="categories" id="p-categ">
-                <option value="fruit">Fruit</option>
-                <option value="vegetable">Vegetable</option>
-                <option value="dairy">Dairy</option>
+                <option value="fruit" <%= product.categories ===  'fruit' ? 'selected' : '' %>>Fruit</option>
+                <option value="vegetable" <%= product.categories ===  'vegetable' ? 'selected' : '' %>>Vegetable</option>
+                <option value="dairy" <%= product.categories ===  'dairy' ? 'selected' : '' %>>Dairy</option>
             </select>
             <br><br>
             <button type="submit">Create!</button>
