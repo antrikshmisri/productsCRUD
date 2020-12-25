@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Create a new product</h1>
+        <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Product Name" value="<%= product.name %>">
+            <br><br>
+            <label for="price">Price</label>
+            <input type="number" name="price" placeholder="Product Price" value="<%= product.price %>">
+            <br><br>
+            <label for="categories">Category</label>
+            <select name="categories" id="p-categ">
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+                <option value="dairy">Dairy</option>
+            </select>
+            <br><br>
+            <button type="submit">Create!</button>
+        </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

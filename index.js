@@ -4,10 +4,11 @@ const path = require('path')
 const mongoose = require('mongoose')
 const Product = require('./models/product')
 const { urlencoded } = require('express')
-
+const methodOverride = require('method-override')
 app.set('views' , path.join(__dirname , 'views'))
 app.set('view engine' , 'ejs')
 app.use(urlencoded({extended:true}))
+app.use(methodOverride('_method'))
 mongoose.connect('mongodb://localhost:27017/productsdb' , {useNewUrlParser: true})
     .then(() => {
         console.log('Mongo connection successful')
@@ -42,6 +43,17 @@ app.get('/products/:id' , async (req , res)=>{
     res.render('products/show' , {product})
 })
 
+app.get('/products/:id/edit' , async (req , res)=>{
+    const {id} = req.params;
+    const product = await Product.findById(id);
+    res.render('products/edit' , {product})
+})
+
+app.put('/products/:id' , async (req , res)=>{
+    const {id} = req.params
+    const updateProduct = await Product.findByIdAndUpdate(id , req.body , {runValidators: true})
+    res.redirect(`/products/${updateProduct._id}`)
+})
 
 app.listen(5050 , ()=>{
     console.log("Listening on port 5050")
