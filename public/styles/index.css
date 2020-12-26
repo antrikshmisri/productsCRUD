@@ -1,0 +1,18 @@
+body
+{
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a
+{
+    margin: 0.5rem 2rem;
+}
+a button
+{
+    min-width: 100px;
+}

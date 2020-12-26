@@ -1,7 +1,7 @@
 <%- include('../partials/head') %>
 <%- include('../partials/footer') %>
-        <h1><%= product.name %> <span>- <b><%= product.price %></b></span></h1>
-        <p><%= product.categories %> </p>
+        <h1><%= product.name %> (<b><%= product.categories %></b>)<span>- <b>$<%= product.price %></b></span></h1>
+        
         <a href="/products"><button>GO BACK!</button></a>
         <a href="/products/<%= product._id %>/edit"><button>EDIT</button></a>
         <a href="/products/<%= product._id %>/delete"><button>DELETE</button></a>
