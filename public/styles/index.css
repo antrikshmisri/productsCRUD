@@ -7,12 +7,46 @@ body
     flex-direction: column;
     min-height: 100vh;
 }
-
+h1
+{
+    font-size: 3rem;
+    font-weight: 700;
+    color: teal;
+}
+ul li
+{
+    font-size: 1.5rem;
+}
 a
 {
+    font-weight: 700;
+    text-decoration: none;
+    color: teal;
     margin: 0.5rem 2rem;
 }
-a button
+a button,button
 {
     min-width: 100px;
+    outline: none;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+input
+{
+    min-width: 200px;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 2px solid teal;
+    padding: 5px 10px;
+}
+select
+{
+    min-width: 200px;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 2px solid teal;
+    padding: 5px 10px;
 }
