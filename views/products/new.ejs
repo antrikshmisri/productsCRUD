@@ -3,13 +3,13 @@
         <h1>Create a new product</h1>
         <form action="/products" method="POST">
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Product Name">
+            <input type="text" name="name" placeholder="Product Name" required>
             <br><br>
             <label for="price">Price</label>
-            <input type="number" name="price" placeholder="Product Price">
+            <input type="number" name="price" placeholder="Product Price" required>
             <br><br>
             <label for="categories">Category</label>
-            <select name="categories" id="p-categ">
+            <select name="categories" id="p-categ" required> 
                 <option value="fruit">Fruit</option>
                 <option value="vegetable">Vegetable</option>
                 <option value="dairy">Dairy</option>

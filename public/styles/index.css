@@ -50,3 +50,8 @@ select
     border: 2px solid teal;
     padding: 5px 10px;
 }
+select option
+{
+    background-color: teal;
+    color: white;
+}
