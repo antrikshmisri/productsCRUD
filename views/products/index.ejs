@@ -1,10 +1,18 @@
 <%- include('../partials/head') %>
 <%- include('../partials/footer') %>
-        <h1>All Products Here</h1>
-        <ul>
-            <% for(let product of products){ %>
-                <li><%= product.name %> -- <a href="/products/<%= product.id %> ">Details</a></li>
-            <% } %>  
-        </ul>
-        <a href="/products/new"><button>Create Product</button></a>
+
+    <div class="filter-section">
+        <span><b>Filter By - </b></span>
+        <a href="/products" class="filters">All</a>
+        <% for(let category of allCategories) {%> 
+            <a href="/products?category=<%= category %>" class="filters"><%= category %></a>
+        <%} %>
+    </div>
+    <h1><%= category[0].toUpperCase() + category.slice(1) %>  Products Here</h1>
+    <ul>
+        <% for(let product of products){ %>
+            <li><%= product.name %> -- <a href="/products/<%= product.id %> ">Details</a></li>
+        <% } %>  
+    </ul>
+    <a href="/products/new"><button>Create Product</button></a>
 

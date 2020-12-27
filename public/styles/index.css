@@ -55,3 +55,17 @@ select option
     background-color: teal;
     color: white;
 }
+
+.filter-section
+{
+    margin-bottom: 3rem;
+}
+
+a.filters
+{
+    text-align: center;
+    padding: 5px 10px;
+    background-color: teal;
+    color: white;
+    border-radius: 15px;
+}
