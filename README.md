@@ -35,7 +35,11 @@ Here are the prerequisites for this project.
 
 `git clone https://github.com/antrikshmisri/productsCRUD.git`
 
-2. Install npm packages
+2. Goto the repo
+
+`cd productsCRUD`
+
+3. Install npm packages
 
 `npm install`
 
