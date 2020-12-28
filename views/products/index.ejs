@@ -13,6 +13,7 @@
         <% for(let product of products){ %>
             <div class="container-fluid product-body">
                 <h2 class="name"><%= product.name %> </h1>
+                <hr>
                 <h3 class="price"><b>$<%= product.price %></b></h3>
                 <a href="/products/<%= product.id %>">More Details</a>
             </div>
