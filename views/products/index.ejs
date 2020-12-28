@@ -9,10 +9,14 @@
         <%} %>
     </div>
     <h1><%= category[0].toUpperCase() + category.slice(1) %>  Products Here</h1>
-    <ul>
+    <div class="products-div container">
         <% for(let product of products){ %>
-            <li><%= product.name %> -- <a href="/products/<%= product.id %> ">Details</a></li>
-        <% } %>  
-    </ul>
+            <div class="container-fluid product-body">
+                <h2 class="name"><%= product.name %> </h1>
+                <h3 class="price"><b>$<%= product.price %></b></h3>
+                <a href="/products/<%= product.id %>">More Details</a>
+            </div>
+        <% } %>
+    </div>
     <a href="/products/new"><button>Create Product</button></a>
 

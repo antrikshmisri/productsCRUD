@@ -6,12 +6,14 @@ const Product = require('./models/product')
 const { urlencoded } = require('express')
 const methodOverride = require('method-override')
 const allCategories = ['fruit' , 'vegetable' , 'dairy']
+
 app.set('views' , path.join(__dirname , 'views'))
 app.set('view engine' , 'ejs')
 app.use(urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 app.use(express.static(__dirname + '/public'));
 app.use('/styles', express.static(__dirname + '/public'));
+
 mongoose.connect('mongodb://localhost:27017/productsdb' , {useNewUrlParser: true})
     .then(() => {
         console.log('Mongo connection successful')
