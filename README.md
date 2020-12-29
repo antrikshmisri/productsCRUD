@@ -33,7 +33,7 @@ Here are the prerequisites for this project.
 
 1. Clone the repo
 
-```bash
+```
 git clone https://github.com/antrikshmisri/productsCRUD.git
 ```
 
@@ -45,7 +45,7 @@ cd productsCRUD
 
 3. Install npm packages
 
-```bash
+```
 npm install
 ```
 
