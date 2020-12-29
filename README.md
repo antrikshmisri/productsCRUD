@@ -33,19 +33,27 @@ Here are the prerequisites for this project.
 
 1. Clone the repo
 
-`git clone https://github.com/antrikshmisri/productsCRUD.git`
+```bash
+git clone https://github.com/antrikshmisri/productsCRUD.git
+```
 
 2. Goto the repo
 
-`cd productsCRUD`
+```bash
+cd productsCRUD
+```
 
 3. Install npm packages
 
-`npm install`
+```bash
+npm install
+```
 
 ## Usage
 
 To run the server use the following command
 
-`nodemon index.js
- //The server runs on localhost:5050`
+```javascript
+nodemon index.js
+ //The server runs on localhost:5050
+ ```
